@@ -6,7 +6,7 @@ import UploadScreen from './components/UploadScreen';
 import ResultScreen from './components/ResultScreen';
 import AzureConfigModal from './components/AzureConfigModal';
 import { DOCUMENTS_DATA } from './data/sampleDocuments';
-import { runAzureVisionOCR, runMandanaAIInference } from './services/azureServices';
+import { runAzureVisionOCR, runSaralAIInference } from './services/azureServices';
 
 export default function App() {
   // Active UI Language: 'en' | 'te' | 'hi'

@@ -138,13 +138,12 @@ export async function runAzureSpeechTTS(text, lang = 'hi', speechRegion, speechK
 }
 
 /**
- * Mandana AI Reasoning Engine
- * Mandana Prompt:
- * "You are Mandana AI. Simplify this document for a low-literacy rural user. Output: 1) What is this? 2) Key Details/Amounts/Dates, 3) Action Required. Keep it under 4 simple bullet points."
+ * Saral Azure AI Reasoning Engine
+ * Structured Prompt:
+ * "Simplify this document for a low-literacy user. Output: 1) What is this? 2) Key Details/Amounts/Dates, 3) Action Required. Keep it under 4 simple bullet points."
  */
-export async function runMandanaAIInference(rawText, targetLang = 'en', optionalApiKey = '') {
-  // If optional LLM key is provided (OpenAI / Azure OpenAI or Gemini), we could fetch it.
-  // Otherwise, use Mandana Intelligent Rule Parser for uploaded text.
+export async function runSaralAIInference(rawText, targetLang = 'en', optionalApiKey = '') {
+  // Uses Saral Intelligent Rule Parser for extracted OCR text.
 
   const textLower = rawText.toLowerCase();
 
@@ -188,7 +187,7 @@ export async function runMandanaAIInference(rawText, targetLang = 'en', optional
     point4 = "Place thumb on scanner machine to unlock your government money deposit.";
   }
 
-  // Format response matching Mandana AI prompt rules
+  // Format response matching Saral AI prompt rules
   const summaryPoints = [
     {
       number: 1,
@@ -218,9 +217,9 @@ export async function runMandanaAIInference(rawText, targetLang = 'en', optional
 
   // Construct audio transcripts
   const ttsTranscripts = {
-    en: `Mandana AI Summary: ${point1} ${point2} ${point3}`,
-    hi: `मंदाना एआई सारांश: ${point1} ${point2} कृपया समय पर आवश्यक कार्रवाई करें।`,
-    te: `మందాన ఏఐ సారాంశం: ${point1} ${point2} దయచేసి తగిన చర్య తీసుకోండి.`
+    en: `Saral AI Summary: ${point1} ${point2} ${point3}`,
+    hi: `सरल एआई सारांश: ${point1} ${point2} कृपया समय पर आवश्यक कार्रवाई करें।`,
+    te: `సరళ్ ఏఐ సారాంశం: ${point1} ${point2} దయచేసి తగిన చర్య తీసుకోండి.`
   };
 
   return {
