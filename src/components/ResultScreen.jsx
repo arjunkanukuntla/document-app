@@ -252,10 +252,10 @@ export default function ResultScreen({
             </div>
           </div>
 
-          {/* Ask Jan-Vani Interactive Section matching User Image 2 */}
+          {/* Ask Saral Interactive Section matching User Image 2 */}
           <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-sm space-y-3">
             <h4 className="text-sm font-bold text-slate-800 font-heading m-0">
-              Ask Jan-Vani
+              Ask Saral
             </h4>
 
             {chatHistory.length > 0 && (

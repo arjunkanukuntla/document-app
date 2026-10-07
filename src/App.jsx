@@ -23,7 +23,7 @@ export default function App() {
   // Azure Config Modal State
   const [isConfigOpen, setIsConfigOpen] = useState(false);
   const [azureConfig, setAzureConfig] = useState(() => {
-    const saved = localStorage.getItem('jan_vani_azure_config');
+    const saved = localStorage.getItem('saral_azure_config');
     if (saved) {
       try {
         return JSON.parse(saved);
@@ -40,7 +40,7 @@ export default function App() {
   });
 
   useEffect(() => {
-    localStorage.setItem('jan_vani_azure_config', JSON.stringify(azureConfig));
+    localStorage.setItem('saral_azure_config', JSON.stringify(azureConfig));
   }, [azureConfig]);
 
   // Handle uploading custom document image or camera photo
@@ -56,7 +56,7 @@ export default function App() {
         );
         setRawOcrText(extractedText);
       } else {
-        setRawOcrText(`DOCUMENT ANALYSIS RESULT\nFile: ${file.name}\nExtracted content analyzed by Jan-Vani.`);
+        setRawOcrText(`DOCUMENT ANALYSIS RESULT\nFile: ${file.name}\nExtracted content analyzed by Saral.`);
       }
 
       // Trigger confetti
@@ -90,7 +90,7 @@ export default function App() {
             className="cursor-pointer flex items-center gap-2"
           >
             <h1 className="text-2xl md:text-3xl font-extrabold text-blue-600 tracking-tight font-heading m-0">
-              Jan-Vani
+              Saral
             </h1>
           </div>
 
@@ -129,7 +129,7 @@ export default function App() {
                   : 'bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50'
               }`}
             >
-              हिन्दी
+              హిందీ
             </button>
 
             {/* Subtle Settings Gear */}
@@ -168,7 +168,7 @@ export default function App() {
       {/* Footer */}
       <footer className="border-t border-slate-100 bg-white py-4 text-center text-xs text-slate-400">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
-          <span>Jan-Vani: Citizen Document &amp; Spoken Voice Simplifier</span>
+          <span>Saral: Document &amp; Spoken Voice Simplifier</span>
           <button
             onClick={() => setView('upload')}
             className="text-blue-600 font-bold hover:underline"
@@ -188,3 +188,4 @@ export default function App() {
     </div>
   );
 }
+

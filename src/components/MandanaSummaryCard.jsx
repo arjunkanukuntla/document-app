@@ -35,7 +35,7 @@ export default function MandanaSummaryCard({ analysis, fontSize, onToggleFontSiz
   };
 
   const handleCopy = () => {
-    const textToCopy = `Jan-Vani / Mandana AI Document Simplifier
+    const textToCopy = `Saral / Mandana AI Document Simplifier
 Document Type: ${analysis.docType}
 
 ${analysis.summaryPoints.map((p) => `${p.number}) ${p.title}\n   ${p.desc}`).join('\n\n')}`;
@@ -47,7 +47,7 @@ ${analysis.summaryPoints.map((p) => `${p.number}) ${p.title}\n   ${p.desc}`).joi
   };
 
   const handleDownloadText = () => {
-    const textContent = `Jan-Vani: Mandana AI Document Simplifier
+    const textContent = `Saral: Mandana AI Document Simplifier
 ----------------------------------------
 Document Type: ${analysis.docType}
 
